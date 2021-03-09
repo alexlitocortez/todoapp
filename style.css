@@ -1,0 +1,60 @@
+
+html {
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media (min-width: 320px) and (max-width: 414px) {
+    html {
+        background-color: hsl(235, 21%, 11%);
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .sun {
+        z-index: 999;
+        position: relative;
+        top: 10px;
+        left: 13px;
+    }
+
+    .todo {
+        letter-spacing: 10px;
+    }
+
+    #sun {
+        height: 25%;
+        position: relative;
+        top: 32px;
+        left: 20px;
+    }
+
+    .background-image {
+        position: relative;
+        top: -97px;
+        left: -10px;
+        z-index: 998;
+    }
+
+    h1 {
+        color: white;
+    }
+
+    /* First checkbox */
+    .todo-1 {
+        display: flex;
+        background-color: hsl(233, 14%, 35%);
+    }
+}
+
+
+
+
+
