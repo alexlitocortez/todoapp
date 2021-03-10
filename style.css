@@ -40,21 +40,76 @@ html {
         position: relative;
         top: -97px;
         left: -10px;
-        z-index: 998;
+        z-index: 997;
     }
 
     h1 {
         color: white;
     }
 
+    /* font properties for todo list */
+    .font {
+        
+    }
+
     /* First checkbox */
+    .container {
+        width: 20px;
+        height: 20px;
+        background-color: hsl(237, 14%, 26%);
+        border: 1px solid hsl(234, 11%, 52%);
+        border-radius: 50%;
+        position: relative;
+        top: 18px;
+        left: 20px;
+    }
+
+    .checkbox {
+        visibility: hidden;
+    }
+
     .todo-1 {
         display: flex;
-        background-color: hsl(233, 14%, 35%);
+        background-color: hsl(237, 14%, 26%);
+        position: relative;
+        bottom: 180px;
+        left: 25px;
+        z-index: 998;
+        border-radius: 10%;
+    }
+
+    .todo-1 p {
+        color: hsl(234, 11%, 52%);
+        position: relative;
+        left: 30px;
+        font-size: 14px;
+    }
+
+    .todo-2 {
+        display: flex;
+        background-color: hsl(237, 14%, 26%);
+        position: relative;
+        left: 25px;
+        border-radius: 5%;
+    }
+
+    .todo-2 p {
+        font-size: 14px;
+        color: hsl(234, 11%, 52%);
+    }
+
+    .todo-3 {
+        display: flex;
+        background-color: hsl(237, 14%, 26%);
+        position: relative;
+        left: 25px;
+        border-radius: 5%;
+    }
+
+    .todo-3 p {
+        font-size: 14px;
     }
 }
-
-
 
 
 
