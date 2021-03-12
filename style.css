@@ -48,10 +48,27 @@ html {
 
     /* font properties for todo list */
     .font {
-        color: hsl(234, 11%, 52%);
+        color: hsl(236, 33%, 92%);
         font-size: 12px;
         position: relative;
         left: 27px;
+    }
+
+    /* font properties for rest of todo list */
+    .font-2 {
+        color: hsl(234, 11%, 52%);
+        font-size: 12px;
+    }
+
+    /* IDs to position paragraph elements correctly */
+    #list-completion-1 {
+        position: relative;
+        left: 20px;
+    }
+
+    #list-completion-2 {
+        position: relative;
+        left: 130px;
     }
 
     /* X sign */
@@ -59,6 +76,41 @@ html {
         position: relative;
         top: 10px;
         right: -65px;
+        height: 15px;
+    }
+
+    .x-2 {
+        position: relative;
+        right: -125px;
+        top: 10px;
+        height: 15px;
+    }
+
+    .x-3 {
+        height: 15px;
+        position: relative;
+        top: 10px;
+        right: -132px;
+    }
+
+    .x-4 {
+        position: relative;
+        top: 10px;
+        right: -165px;
+        height: 15px;
+    }
+
+    .x-5 {
+        position: relative;
+        top: 10px;
+        right: -155px;
+        height: 15px;
+    }
+
+    .x-6 {
+        position: relative;
+        top: 10px;
+        right: -37px;
         height: 15px;
     }
 
@@ -89,7 +141,7 @@ html {
     }
 
     .todo-1 p {
-        color: hsl(234, 11%, 52%);
+        color: hsl(236, 33%, 92%);
         position: relative;
         left: 30px;
         font-size: 12px;
