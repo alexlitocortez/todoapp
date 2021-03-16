@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <title>Todo App</title>
 </head>
-<header class="sun">
+<header class="sun" id="icon-image">
     <h1 class="todo">TODO</h1>
     <img id="sun" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-sun.svg" alt="sun-icon">
 </header>
 <body>
     <div class="background-image">
-        <img src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-mobile-dark.jpg" alt="mobile-design-dark">
+        <img id="background-image" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-mobile-dark.jpg" alt="mobile-design-dark">
     </div>
-    <div class="todo-1">
+    <div class="todo-1" id="todo">
         <label class="container">
             <input class="checkbox" type="checkbox">
             <span class="checkmark"></span>
@@ -24,8 +24,8 @@
     </div>
 
     <!-- Main app list -->
-    <section class="app-list">
-        <div class="todo-2">
+    <section class="app-list" id="app-list">
+        <div class="todo-2" id="todo-1">
             <label class="container" type="checkbox">
                 <input class="checkbox" type="checkbox">
                 <span class="checkmark"></span>
@@ -33,49 +33,59 @@
             <p class="font">Complete online Javascript course</p>
             <img class="x" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-cross.svg" alt="x sign">
         </div>
-        <div class="greybox">
+        <div class="greybox" id="todo-2">
             <label class="container" type="checkbox">
                 <input class="checkbox" type="checkbox">
             </label>
             <p class="font">Jog around the park 3x</p>
             <img class="x-2" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-cross.svg" alt="x sign">
         </div>
-        <div class="greybox">
+        <div class="greybox" id="todo-3">
             <label class="container" type="checkbox">
                 <input class="checkbox" type="checkbox">
             </label>
             <p class="font">10 minutes meditation</p>
             <img class="x-3" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-cross.svg" alt="x sign">
         </div>
-        <div class="greybox">
+        <div class="greybox" id="todo-4">
             <label class="container" type="checkbox">
                 <input class="checkbox" type="checkbox">
             </label>
             <p class="font">Read for 1 hour</p>
             <img class="x-4" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-cross.svg" alt="x sign">
         </div>
-        <div class="greybox">
+        <div class="greybox" id="todo-5">
             <label class="container" type="checkbox">
                 <input class="checkbox" type="checkbox">
             </label>
             <p class="font">Pick up groceries</p>
             <img class="x-5" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-cross.svg" alt="x sign">
         </div>
-        <div class="greybox">
+        <div class="greybox" id="todo-6">
             <label class="container" type="checkbox">
                 <input class="checkbox" type="checkbox">
             </label>
             <p class="font">Complete todo app on Frontend Mentor</p>
             <img class="x-6" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-cross.svg" alt="x sign">
         </div>
-        <div class="greybox">
+        <div class="greybox" id="todo-7">
             <p class="font-2" id="list-completion-1">5 items left</p>
             <p class="font-2" id="list-completion-2">Clear Completed</p>
         </div>
     </section>
 
     <!-- Section for new div -->
-        
+        <div class="greybox font-2 filter-bar">
+            <p>All</p>
+            <p>Active</p>
+            <p>Completed</p>
+        </div>
+
+    <!-- Drag and drop reminder -->
+        <div class="drag-and-drop">
+            <p class="font-2">Drag and drop to reorder list</p>
+        </div>
+    <script src="app.js"></script>
 </body>
 </html>
 
