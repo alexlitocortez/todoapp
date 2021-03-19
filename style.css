@@ -170,10 +170,9 @@ html {
         position: relative;
         left: 25px;
     }
-}
 
-    /* Positioning for filter-bar */
-    .filter-bar {
+       /* Positioning for filter-bar */
+       .filter-bar {
         position: relative;
         bottom: 150px;
     }
@@ -195,7 +194,67 @@ html {
         text-align: center;
     }
 
-    /* active class for switching themes */
-    .light-theme {
-
+    /* active class for inserting checkmark and checkmark color*/
+    .checkmark-blue {
+        background: linear-gradient(45deg, rgba(192, 88, 243), rgba(87, 221, 255));
     }
+
+    #checkmark-active-1 {
+        position: relative;
+        top: 5px;
+        left: 4px;
+    }
+
+    #checkmark-active-2 {
+        position: relative;
+        top: 5px;
+        left: 4px;
+    }
+
+    #checkmark-active-3 {
+        position: relative;
+        top: 5px;
+        left: 4px;
+    }
+
+    #checkmark-active-4 {
+        position: relative;
+        top: 5px;
+        left: 4px;
+    }
+
+    #checkmark-active-5 {
+        position: relative;
+        top: 5px;
+        left: 4px;
+    }
+
+    #checkmark-active-6 {
+        position: relative;
+        top: 5px;
+        left: 4px;
+    }
+
+    /* light theme */
+    
+}
+
+
+
+
+
+
+    /* Mobile landscape */
+@media (min-width: 568px) and (max-width: 812px) {
+
+}
+
+    /* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+    /* Laptops and larger */
+@media (min-width: 1200px) {
+
+}
