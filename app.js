@@ -16,12 +16,13 @@ const container = document.getElementsByClassName('container');
 btn.addEventListener('click', () => {
     document.body.classList.toggle('light');
     document.querySelector('html').classList.toggle('light');
-    if(image.src == darkImage) {
-        lightestImage();
-    } else {
-        darkestImage();
-    }
+    iconImage.classList.toggle('light');
 })
+
+
+
+// Remove other image
+
 
 // Functions for line strikethough when user is done with todo item
 function strike() {
