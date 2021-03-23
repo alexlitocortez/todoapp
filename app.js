@@ -16,13 +16,15 @@ const container = document.getElementsByClassName('container');
 btn.addEventListener('click', () => {
     document.body.classList.toggle('light');
     document.querySelector('html').classList.toggle('light');
-    iconImage.classList.toggle('light');
+    iconImage.classList.toggle('lightimage');
+    newIcons();
 })
 
-
-
-// Remove other image
-
+// Working on replacing icon when button clicked
+// Maybe use function to plug in image when time
+function newIcons() {
+    
+}
 
 // Functions for line strikethough when user is done with todo item
 function strike() {
