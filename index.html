@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <title>Todo App</title>
 </head>
-<header class="sun" id="icon-image">
+<header class="sun">
     <h1 class="todo">TODO</h1>
-    <img id="sun" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-sun.svg" alt="sun-icon">
+    <div id="icon-image">
+        <img id="sunimage" onclick="changeIcon()" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-sun.svg" alt="sun-icon">
+        <img class="moonimage" id="moonimage" onclick="changeIcon()" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-moon.svg" alt="moon-icon">
+    </div>
 </header>
 <body>
     <div class="background-image">
@@ -22,8 +25,6 @@
         </label>
         <p class="font">Create a new todo...</p>
     </div>
-
-
     <!-- Main app list -->
     <section class="app-list" id="app-list">
         <div class="todo-2 todos" id="todo-2">
