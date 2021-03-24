@@ -1,12 +1,16 @@
 
 const darkImage = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-mobile-dark.jpg";
-const lightImage = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-mobile-light.jpg"
-const moon = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-moon.svg";
+const lightImage = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-mobile-light.jpg";
 const sun = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-sun.svg";
+const moon = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-moon.svg";
 const btn = document.getElementById('icon-image');
 
+// Icon
+const iconImage = document.getElementById('icon-image');
+const sunIcon = document.getElementById('sun');
+const moonIcon = document.getElementById('moon');
 
-const iconImage = document.getElementById('sun');
+
 const image = document.getElementById('background-image');
 const cols = document.getElementsByClassName('todos');
 const font = document.getElementsByClassName('font');
@@ -17,14 +21,20 @@ btn.addEventListener('click', () => {
     document.body.classList.toggle('light');
     document.querySelector('html').classList.toggle('light');
     iconImage.classList.toggle('lightimage');
-    newIcons();
 })
 
-// Working on replacing icon when button clicked
-// Maybe use function to plug in image when time
-function newIcons() {
-    
+// making image hidden when clicked
+function changeIcon() {
+    if(iconImage.classList.contains('sunimage')) {
+        iconImage.classList.contains('moonimage');
+        iconImage.classList.remove('sunimage');
+    } else {
+        
+    }
 }
+
+
+
 
 // Functions for line strikethough when user is done with todo item
 function strike() {
