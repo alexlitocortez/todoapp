@@ -6,9 +6,7 @@ const moon = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/i
 const btn = document.getElementById('icon-image');
 
 // Icon
-const iconImage = document.getElementById('icon-image');
-const sunIcon = document.getElementById('sun');
-const moonIcon = document.getElementById('moon');
+const sunIcon = document.getElementById('sunimage');
 
 
 const image = document.getElementById('background-image');
@@ -16,24 +14,19 @@ const cols = document.getElementsByClassName('todos');
 const font = document.getElementsByClassName('font');
 const container = document.getElementsByClassName('container');
 
+const iconImages = document.getElementById('iconImages')
+
 
 btn.addEventListener('click', () => {
     document.body.classList.toggle('light');
     document.querySelector('html').classList.toggle('light');
-    iconImage.classList.toggle('lightimage');
 })
 
-// making image hidden when clicked
-function changeIcon() {
-    if(iconImage.classList.contains('sunimage')) {
-        iconImage.classList.contains('moonimage');
-        iconImage.classList.remove('sunimage');
-    } else {
-        
-    }
+function setDark() {
+    iconImages.classList.toggle('light');
 }
 
-
+// how to get sun to disappear
 
 
 // Functions for line strikethough when user is done with todo item
