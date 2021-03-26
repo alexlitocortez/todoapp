@@ -20,11 +20,14 @@ const iconImages = document.getElementById('iconImages')
 btn.addEventListener('click', () => {
     document.body.classList.toggle('light');
     document.querySelector('html').classList.toggle('light');
+    image.classList.toggle('lightimage');
 })
 
 function setDark() {
     iconImages.classList.toggle('light');
+    image.classList.toggle('lightimage');
 }
+
 
 // how to get sun to disappear
 
