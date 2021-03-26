@@ -7,17 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <title>Todo App</title>
 </head>
-<header class="sun">
+<header class="sun" id="icon-image">
     <h1 class="todo">TODO</h1>
-    <div id="icon-image">
-        <img id="sunimage" onclick="changeIcon()" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-sun.svg" alt="sun-icon">
-        <img class="moonimage" id="moonimage" onclick="changeIcon()" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-moon.svg" alt="moon-icon">
-    </div>
+    <span class="theme-switch" id="iconImages" onclick="setDark()"></span>
 </header>
+<div class="background-image">
+    <span class="darkimage" id="background-image" onclick="setDark()" alt="mobile-design-dark"></span>
+</div>
 <body>
-    <div class="background-image">
-        <img id="background-image" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-mobile-dark.jpg" alt="mobile-design-dark">
-    </div>
+
     <div class="todo-1 todos">
         <label class="container">
             <input class="checkbox" type="checkbox">
