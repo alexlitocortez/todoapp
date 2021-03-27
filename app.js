@@ -9,24 +9,25 @@ const btn = document.getElementById('icon-image');
 const sunIcon = document.getElementById('sunimage');
 
 
-const image = document.getElementById('background-image');
+const image = document.getElementById('background-images');
 const cols = document.getElementsByClassName('todos');
 const font = document.getElementsByClassName('font');
 const container = document.getElementsByClassName('container');
-
+const images = document.getElementById('background-images');
 const iconImages = document.getElementById('iconImages')
 
 
 btn.addEventListener('click', () => {
     document.body.classList.toggle('light');
     document.querySelector('html').classList.toggle('light');
-    image.classList.toggle('lightimage');
 })
 
 function setDark() {
     iconImages.classList.toggle('light');
-    image.classList.toggle('lightimage');
+    document.getElementById('background-images').innerHTML = "<img src=\"todo-app-main/images/bg-desktop-light.jpg\" width=\"400px\" height=\"200px\">";
+    document.body.style.backgroundRepeat = "no-repeat";
 }
+
 
 
 // how to get sun to disappear
