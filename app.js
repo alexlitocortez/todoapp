@@ -1,36 +1,38 @@
 
-const darkImage = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-mobile-dark.jpg";
-const lightImage = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-mobile-light.jpg";
+// Icon
 const sun = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-sun.svg";
 const moon = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-moon.svg";
+
+// Icon divs
+const sunIcon = document.getElementById('sunimage');
 const btn = document.getElementById('icon-image');
 
-// Icon
-const sunIcon = document.getElementById('sunimage');
-
-
+// Background image divs
 const image = document.getElementById('background-images');
+const play = document.getElementById('play')
+
+// App todo styling and divs
 const cols = document.getElementsByClassName('todos');
 const font = document.getElementsByClassName('font');
 const container = document.getElementsByClassName('container');
 const images = document.getElementById('background-images');
 const iconImages = document.getElementById('iconImages')
 
+// images
+const darkImage = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-mobile-dark.jpg";
+const lightImage = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-mobile-light.jpg";
 
-btn.addEventListener('click', () => {
+
+btn.addEventListener('click', function setDark() {
     document.body.classList.toggle('light');
     document.querySelector('html').classList.toggle('light');
+    document.getElementById('background-images').classList.toggle('lightimage');
 })
 
-function setDark() {
-    iconImages.classList.toggle('light');
-    document.getElementById('background-images').innerHTML = "<img src=\"todo-app-main/images/bg-desktop-light.jpg\" width=\"400px\" height=\"200px\">";
-    document.body.style.backgroundRepeat = "no-repeat";
-}
 
 
 
-// how to get sun to disappear
+
 
 
 // Functions for line strikethough when user is done with todo item
