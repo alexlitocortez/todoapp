@@ -1,15 +1,124 @@
 
 html {
     font-family: 'Josefin Sans', sans-serif;
+    background-color: hsl(235, 21%, 11%);
 }
 
-* {
-    box-sizing: border-box;
+.container {
+    width: 20px;
+    height: 20px;
+    background-color: hsl(237, 14%, 26%);
+    border: 1px solid hsl(234, 11%, 52%);
+    border-radius: 50%;
+    position: relative;
+    top: 10px;
+    left: 20px;
 }
+
+.checkbox {
+    visibility: hidden;
+}
+
+.checkmark-blue {
+    background: linear-gradient(45deg, rgba(192, 88, 243), rgba(87, 221, 255));
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-desktop-dark.jpg') top left no-repeat;
+        background-size: 100% auto;
+        font-weight: 400;
+        line-height: 16px;
+    }
+    
+    .darkimage {
+        display: none;
+    }
+    
+    h1 {
+        color: white;
+    }
+    
+    .font {
+        color: hsl(236, 33%, 92%);
+    }
+
+    .app-list {
+        position: relative;
+        top: 30px;
+        left: 400px;
+    }
+
+    .todo-1 {
+        position: relative;
+        left: 400px;
+    }
+
+    .todo-1,
+    .todo-2 {
+        background-color: hsl(237, 14%, 26%);
+        width: 400px;
+    }
+
+    .todos {
+        display: flex;
+    }
+
+    .greybox {
+        background-color: hsl(237, 14%, 26%);
+        width: 400px;
+    }
+
+    .x {
+        position: relative;
+        left: 100px;
+        top: 7px;
+        height: 25px;
+    }
+
+    .x-2 {
+        position: relative;
+        left: 180px;
+        top: 7px;
+        height: 25px;
+    }
+
+    .x-3 {
+        position: relative;
+        left: 185px;
+        top: 7px;
+        height: 25px;
+    }
+
+    .x-4 {
+        position: relative;
+        top: 7px;
+        height: 25px;
+    }
+
+    .x-5 {
+        position: relative;
+        top: 7px;
+        height: 25px;
+    }
+
+    .x-6 {
+        position: relative;
+        top: 7px;
+        height: 25px;
+    }
+}
+
+
+
 
 @media (min-width: 320px) and (max-width: 414px) {
-    html {
-        background-color: hsl(235, 21%, 11%);
+    h1 {
+        color: white;
     }
 
     header {
@@ -28,22 +137,14 @@ html {
         letter-spacing: 10px;
     }
 
-    #sun {
-        height: 25%;
-        position: relative;
-        top: 32px;
-        left: 20px;
-    }
 
+    /* Icon images (sun, moon) */
     .background-image {
         position: relative;
-        top: -97px;
         left: -10px;
         z-index: 997;
-    }
-
-    h1 {
-        color: white;
+        height: 10px;
+        bottom: 100px;
     }
 
     /* font properties for todo list */
@@ -134,8 +235,8 @@ html {
         display: flex;
         background-color: hsl(237, 14%, 26%);
         position: relative;
-        bottom: 180px;
-        left: 25px;
+        bottom: -5px;
+        left: 20px;
         z-index: 998;
         border-radius: 10%;
     }
@@ -153,14 +254,15 @@ html {
         background-color: hsl(237, 14%, 26%);
         position: relative;
         top: 5px;
-        left: 25px;
+        left: 15px;
         border-radius: 5%;
     }
 
     .app-list {
         position: relative;
-        bottom: 170px;
+        bottom: -15px;
         z-index: 998;
+        left: 5px;
     }
 
     /* Format for each app list item */
@@ -168,13 +270,14 @@ html {
         display: flex;
         background-color: hsl(237, 14%, 26%);
         position: relative;
-        left: 25px;
+        left: 15px;
     }
 
        /* Positioning for filter-bar */
-       .filter-bar {
+    .filter-bar {
         position: relative;
-        bottom: 150px;
+        bottom: -30px;
+        left: 20px;
     }
 
     /* Spacing between paragraph elements in filter-bar */
@@ -189,8 +292,9 @@ html {
     /* Positioning for drag-and-drop paragraph */
     .drag-and-drop {
         position: relative;
-        bottom: 110px;
-        left: 23px;
+        top: 40px;
+        left: 20px;
+        padding-bottom: 20px;
         text-align: center;
     }
 
@@ -236,11 +340,35 @@ html {
     }
 
     /* light theme */
-    
+    .theme-switch {
+        background-image: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-sun.svg');
+        position: relative;
+        top: 27px;
+        left: 10px;
+        width: 32px;
+        background-repeat: no-repeat;
+    }
+
+    .light .theme-switch {
+        background-image: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-moon.svg');
+        background-repeat: no-repeat;
+        position: relative;
+        top: 27px;
+        left: 20px;
+    }
+
+    .light .background-image {
+        background-image: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-mobile-light.jpg') no-repeat;
+    }
+
+    html.light,
+    .light .container,
+    .light .todo-1,
+    .light .todo-2,
+    .light .greybox {
+        background-color: white;
+    }
 }
-
-
-
 
 
 
@@ -250,11 +378,13 @@ html {
 }
 
     /* Tablet */
-@media (min-width: 768px) and (max-width: 1024px) {
 
-}
 
     /* Laptops and larger */
 @media (min-width: 1200px) {
+
+}
+
+@media (min-width: 575px) and (max-width: 1440px) {
 
 }
