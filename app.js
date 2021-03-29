@@ -23,11 +23,15 @@ const darkImage = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/ima
 const lightImage = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-mobile-light.jpg";
 
 
-btn.addEventListener('click', function setDark() {
+btn.addEventListener('click', () => {
     document.body.classList.toggle('light');
     document.querySelector('html').classList.toggle('light');
-    document.getElementById('background-images').classList.toggle('lightimage');
 })
+
+
+
+
+
 
 
 
