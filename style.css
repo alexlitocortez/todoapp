@@ -23,6 +23,20 @@ html {
     background: linear-gradient(45deg, rgba(192, 88, 243), rgba(87, 221, 255));
 }
 
+.font-2 {
+    color: hsl(234, 11%, 52%);
+    font-size: 16px;
+}
+
+html.light,
+    .light .container,
+    .light .todo-1,
+    .light .todo-2,
+    .light .greybox {
+        background-color: white;
+    }
+
+
 @media (min-width: 768px) and (max-width: 1024px) {
     * {
         box-sizing: border-box;
@@ -31,12 +45,48 @@ html {
     body {
         background: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-desktop-dark.jpg') top left no-repeat;
         background-size: 100% auto;
+        width: 1024px;
         font-weight: 400;
         line-height: 16px;
     }
-    
+
+    .light body {
+        background: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-desktop-light.jpg') no-repeat;
+        background-size: 100% auto;
+    }
+
+    h1 {
+        letter-spacing: 10px;
+        font-size: 36px;
+    }
+
     .darkimage {
         display: none;
+    }
+
+    .theme-switch {
+        background: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-sun.svg') no-repeat;
+        display: block;
+        height: 30px;
+        position: relative;
+        left: 370px;
+        bottom: 40px;
+    }
+
+    .light .theme-switch {
+        background-image: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-moon.svg');
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .sun {
+        position: relative;
+        left: 330px;
+        top: 70px;
+    }
+
+    .theme-switch {
+        width: 32px;
     }
     
     h1 {
@@ -45,23 +95,28 @@ html {
     
     .font {
         color: hsl(236, 33%, 92%);
+        position: relative;
+        left: 35px;
+        bottom: 3px;
     }
 
     .app-list {
         position: relative;
-        top: 30px;
-        left: 400px;
+        top: 90px;
+        left: 330px;
     }
 
     .todo-1 {
         position: relative;
-        left: 400px;
+        left: 330px;
+        top: 70px;
     }
 
     .todo-1,
     .todo-2 {
         background-color: hsl(237, 14%, 26%);
         width: 400px;
+        
     }
 
     .todos {
@@ -96,20 +151,60 @@ html {
 
     .x-4 {
         position: relative;
+        left: 230px;
         top: 7px;
         height: 25px;
     }
 
     .x-5 {
         position: relative;
+        left: 216px;
         top: 7px;
         height: 25px;
     }
 
     .x-6 {
         position: relative;
+        left: 59px;
         top: 7px;
         height: 25px;
+    }
+
+    #list-completion-1 {
+        position: relative;
+        left: 20px;
+    }
+
+    #list-completion-2 {
+        position: relative;
+        left: 160px;
+    }
+
+    .filter-bar {
+        display: none;
+    }
+
+    .font-2 {
+        font-size: 10px;
+    }
+
+    .new-filter-bar {
+        display: flex;
+        color: hsl(234, 11%, 52%);
+        position: relative;
+        left: 100px;
+        font-size: 10px;
+    }
+
+    .new-filter-bar p {
+        margin-right: 5px;
+    }
+
+    .drag-and-drop {
+        position: relative;
+        top: 100px;
+        left: 460px;
+        font-size: 24px;
     }
 }
 
@@ -123,7 +218,6 @@ html {
 
     header {
         display: flex;
-        justify-content: space-between;
     }
 
     .sun {
@@ -155,12 +249,6 @@ html {
         left: 27px;
     }
 
-    /* font properties for rest of todo list */
-    .font-2 {
-        color: hsl(234, 11%, 52%);
-        font-size: 12px;
-    }
-
     /* IDs to position paragraph elements correctly */
     #list-completion-1 {
         position: relative;
@@ -169,7 +257,7 @@ html {
 
     #list-completion-2 {
         position: relative;
-        left: 130px;
+        left: 85px;
     }
 
     /* X sign */
@@ -263,6 +351,7 @@ html {
         bottom: -15px;
         z-index: 998;
         left: 5px;
+        width: 300px;
     }
 
     /* Format for each app list item */
@@ -278,6 +367,10 @@ html {
         position: relative;
         bottom: -30px;
         left: 20px;
+    }
+
+    .new-filter-bar {
+        display: none;
     }
 
     /* Spacing between paragraph elements in filter-bar */
@@ -342,11 +435,11 @@ html {
     /* light theme */
     .theme-switch {
         background-image: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-sun.svg');
+        background-repeat: no-repeat;
         position: relative;
         top: 27px;
-        left: 10px;
+        left: 150px;
         width: 32px;
-        background-repeat: no-repeat;
     }
 
     .light .theme-switch {
@@ -354,19 +447,11 @@ html {
         background-repeat: no-repeat;
         position: relative;
         top: 27px;
-        left: 20px;
+        left: 150px;
     }
 
-    .light .background-image {
-        background-image: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-mobile-light.jpg') no-repeat;
-    }
-
-    html.light,
-    .light .container,
-    .light .todo-1,
-    .light .todo-2,
-    .light .greybox {
-        background-color: white;
+    .light body {
+        background: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-mobile-light.jpg') no-repeat;
     }
 }
 
