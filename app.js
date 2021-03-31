@@ -11,6 +11,9 @@ const btn = document.getElementById('icon-image');
 const image = document.getElementById('background-images');
 const play = document.getElementById('play')
 
+// ToDo item divs
+const todoThree = document.getElementById('todo-3');
+
 // App todo styling and divs
 const cols = document.getElementsByClassName('todos');
 const font = document.getElementsByClassName('font');
@@ -23,20 +26,12 @@ const darkImage = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/ima
 const lightImage = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-mobile-light.jpg";
 
 
+
 btn.addEventListener('click', () => {
     document.body.classList.toggle('light');
+    document.body.classList.remove('darkimage');
     document.querySelector('html').classList.toggle('light');
 })
-
-
-
-
-
-
-
-
-
-
 
 
 // Functions for line strikethough when user is done with todo item
@@ -47,10 +42,21 @@ function strike() {
 }
 
 function strikeOne() {
-    document.getElementById('todo-3').style.setProperty('text-decoration', 'line-through');
+    todoTwo.style.setProperty('text-decoration', 'line-through');
     document.getElementById('containerTwo').classList.toggle('checkmark-blue');
-    document.getElementById('checkmark-active-2').style.display='block';
+    document.getElementById('checkmark-active-2').style.display = 'block';
+        else {
+        todoTwo.style.textDecoration = 'none';
+        document.getElementById('checkmark-active-2').style.display = 'none';
+    }
 }
+
+
+
+
+
+
+
 
 function strikeTwo() {
     document.getElementById('todo-4').style.setProperty('text-decoration', 'line-through');
@@ -80,10 +86,8 @@ function strikeFive() {
 
 
 
- 
-// Can revert back to dark theme
 
 //functionalities need to code for
 // 1. drag and drop
-// 2. switch between dark/light theme
-// 3. checkmark when task completed
+// 2. Adding new Todos
+// 3. Undoing strikethrough when clicked again
