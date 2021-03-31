@@ -36,6 +36,186 @@ html.light,
         background-color: white;
     }
 
+@media (min-width: 1440px) and (max-width: 2000px) {
+    html {
+        font-family: 'Josefin Sans', sans-serif;
+        background-color: hsl(235, 21%, 11%);
+    }
+
+    body {
+        background: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-desktop-dark.jpg') no-repeat;
+        background-size: 100% auto;
+        width: 2000px;
+        height: 200px;
+        font-weight: 500;
+        line-height: 16px;
+        overflow-x: hidden;
+    }
+
+    .light body {
+        background: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-desktop-light.jpg') no-repeat;
+        background-size: 100% auto;
+    }
+
+    h1 {
+        color: white;
+        letter-spacing: 12px;
+        font-size: 40px;
+    }
+
+    .sun {
+        position: relative;
+        left: 600px;
+        top: 70px;
+    }
+
+    .darkimage {
+        display: none;
+    }
+
+    .theme-switch {
+        background: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-sun.svg') no-repeat;
+        display: block;
+        height: 30px;
+        position: relative;
+        left: 370px;
+        bottom: 40px;
+    }
+
+    .light .theme-switch {
+        background-image: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-moon.svg');
+        background-repeat: no-repeat;
+    }
+
+    .font {
+        color: hsl(236, 33%, 92%);
+        position: relative;
+        left: 35px;
+        bottom: 3px;
+    }
+
+    .todo-1 {
+        position: relative;
+        top: 60px;
+        left: 600px;
+    }
+
+    .todo-1,
+    .todo-2 {
+        background-color: hsl(237, 14%, 26%);
+        width: 400px;
+    }
+
+    /* Checkmark positioning */
+    #checkmark-active-1,
+    #checkmark-active-2,
+    #checkmark-active-3,
+    #checkmark-active-4,
+    #checkmark-active-5,
+    #checkmark-active-6 {
+        position: relative;
+        top: 6px;
+        left: 4px;
+    }
+
+    .todos {
+        display: flex;
+    }
+
+    .greybox {
+        background-color: hsl(237, 14%, 26%);
+        width: 400px;
+    }
+
+    .app-list {
+        position: relative;
+        top: 90px;
+        left: 600px;
+    }
+
+    .x {
+        position: relative;
+        top: 10px;
+        left: 90px;
+        height: 25px;
+    }
+
+    .x-2 {
+        position: relative;
+        top: 10px;
+        left: 170px;
+        height: 25px;
+    }
+
+    .x-3 {
+        position: relative;
+        top: 10px;
+        left: 175px;
+        height: 25px;
+    }
+
+    .x-4 {
+        position: relative;
+        top: 10px;
+        left: 220px;
+        height: 25px;
+    }
+
+    .x-5 {
+        position: relative;
+        top: 10px;
+        left: 207px;
+        height: 25px;
+    }
+
+    .x-6 {
+        position: relative;
+        top: 10px;
+        left: 50px;
+        height: 25px;
+    }
+
+    .font-2 {
+        font-size: 12px;
+        position: relative;
+        left: 20px;
+    }
+
+    .new-filter-bar {
+        display: flex;
+        color: hsl(236, 33%, 92%);
+        font-size: 12px;
+        position: relative;
+        left: 80px;
+    }
+
+    .new-filter-bar p {
+        margin-right: 5px;
+    }
+
+    .filter-bar {
+        display: none;
+    }
+
+    #list-completion-2 {
+        position: relative;
+        left: 120px;
+    }
+
+    .drag-and-drop {
+        position: relative;
+        top: 150px;
+        left: 700px;
+    }
+}
+
+
+
+
+
+
+
+
 
 @media (min-width: 768px) and (max-width: 1024px) {
     * {
@@ -91,6 +271,18 @@ html.light,
     
     h1 {
         color: white;
+    }
+
+    /* checkmark positioning */
+    #checkmark-active-1,
+    #checkmark-active-2,
+    #checkmark-active-3,
+    #checkmark-active-4,
+    #checkmark-active-5,
+    #checkmark-active-6 {
+        position: relative;
+        top: 6px;
+        left: 4px;
     }
     
     .font {
@@ -209,9 +401,14 @@ html.light,
 }
 
 
-
-
 @media (min-width: 320px) and (max-width: 414px) {
+    body {
+        background: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-mobile-dark.jpg') top left no-repeat;
+        background-size: 100% auto;
+        width: 360px;
+        overflow-x: hidden;
+    }
+
     h1 {
         color: white;
     }
@@ -327,6 +524,7 @@ html.light,
         left: 20px;
         z-index: 998;
         border-radius: 10%;
+        width: 300px;
     }
 
     .todo-1 p {
@@ -367,6 +565,7 @@ html.light,
         position: relative;
         bottom: -30px;
         left: 20px;
+        width: 300px;
     }
 
     .new-filter-bar {
@@ -386,7 +585,7 @@ html.light,
     .drag-and-drop {
         position: relative;
         top: 40px;
-        left: 20px;
+        left: 5px;
         padding-bottom: 20px;
         text-align: center;
     }
@@ -457,19 +656,6 @@ html.light,
 
 
 
-    /* Mobile landscape */
-@media (min-width: 568px) and (max-width: 812px) {
-
-}
-
-    /* Tablet */
 
 
-    /* Laptops and larger */
-@media (min-width: 1200px) {
 
-}
-
-@media (min-width: 575px) and (max-width: 1440px) {
-
-}
