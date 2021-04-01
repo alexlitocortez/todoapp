@@ -36,19 +36,15 @@ btn.addEventListener('click', () => {
 
 // Functions for line strikethough when user is done with todo item
 function strike() {
-    document.getElementById('todo-2').style.setProperty('text-decoration', 'line-through');
-    document.getElementById('containerOne').classList.toggle('checkmark-blue');
-    document.getElementById('checkmark-active-1').style.display='block';
+    document.getElementById('todo-2').classList.toggle('linethrough');
+    document.getElementById('containerOne').classList.toggle('rainbow');
+    document.getElementById('containerOne').classList.toggle('checkmarkeazy');
 }
 
 function strikeOne() {
-    todoTwo.style.setProperty('text-decoration', 'line-through');
+    document.getElementById('todo-3').style.setProperty('text-decoration', 'line-through');
     document.getElementById('containerTwo').classList.toggle('checkmark-blue');
     document.getElementById('checkmark-active-2').style.display = 'block';
-        else {
-        todoTwo.style.textDecoration = 'none';
-        document.getElementById('checkmark-active-2').style.display = 'none';
-    }
 }
 
 
