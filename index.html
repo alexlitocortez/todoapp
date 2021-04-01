@@ -9,16 +9,13 @@
 </head>
 <header class="sun" id="icon-image">
     <h1 class="todo">TODO</h1>
-    <span class="theme-switch" id="iconImages" onclick="setDark()"></span>
+    <span class="theme-switch" id="iconImages"></span>
 </header>
-<div class="background-image">
-    <span class="darkimage" id="background-image" onclick="setDark()" alt="mobile-design-dark"></span>
-</div>
+
 <body>
 
     <div class="todo-1 todos">
         <label class="container">
-            <input class="checkbox" type="checkbox">
             <span class="checkmark"></span>
         </label>
         <p class="font">Create a new todo...</p>
@@ -27,16 +24,13 @@
     <section class="app-list" id="app-list">
         <div class="todo-2 todos" id="todo-2">
             <label class="container" id="containerOne" type="checkbox">
-                <img id="checkmark-active-1" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-check.svg" style="display: none;" alt="checkmark">
-                <input class="checkbox" type="checkbox">
             </label>
-            <p class="font" id="" onclick="strike()">Complete online Javascript course</p>
+            <p class="font" onclick="strike()">Complete online Javascript course</p>
             <img class="x" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-cross.svg" alt="x sign">
         </div>
         <div class="greybox todos" id="todo-3">
             <label class="container" id="containerTwo" type="checkbox">
                 <img id="checkmark-active-2" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-check.svg" style="display: none;" alt="checkmark">
-                <input class="checkbox" type="checkbox">
             </label>
             <p class="font" onclick="strikeOne()">Jog around the park 3x</p>
             <img class="x-2" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-cross.svg" alt="x sign">
@@ -44,7 +38,6 @@
         <div class="greybox todos" id="todo-4">
             <label class="container" id="containerThree" type="checkbox">
                 <img id="checkmark-active-3" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-check.svg" style="display: none;" alt="checkmark">
-                <input class="checkbox" type="checkbox">
             </label>
             <p class="font" onclick="strikeTwo()">10 minutes meditation</p>
             <img class="x-3" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-cross.svg" alt="x sign">
@@ -52,7 +45,6 @@
         <div class="greybox todos" id="todo-5">
             <label class="container" id="containerFour" type="checkbox">
                 <img id="checkmark-active-4" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-check.svg" style="display: none;" alt="checkmark">
-                <input class="checkbox" type="checkbox">
             </label>
             <p class="font" onclick="strikeThree()">Read for 1 hour</p>
             <img class="x-4" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-cross.svg" alt="x sign">
@@ -60,7 +52,6 @@
         <div class="greybox todos" id="todo-6">
             <label class="container" id="containerFive" type="checkbox">
                 <img id="checkmark-active-5" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-check.svg" style="display: none;" alt="checkmark">
-                <input class="checkbox" type="checkbox">
             </label>
             <p class="font" onclick="strikeFour()">Pick up groceries</p>
             <img class="x-5" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-cross.svg" alt="x sign">
@@ -68,18 +59,22 @@
         <div class="greybox todos" id="todo-7">
             <label class="container" id="containerSix" type="checkbox">
                 <img id="checkmark-active-6" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-check.svg" style="display: none;" alt="checkmark">
-                <input class="checkbox" type="checkbox">
             </label>
             <p class="font" onclick="strikeFive()">Complete todo app on Frontend Mentor</p>
             <img class="x-6" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-cross.svg" alt="x sign">
         </div>
         <div class="greybox todos">
             <p class="font-2" id="list-completion-1">5 items left</p>
+                <div class="new-filter-bar">
+                    <p>All</p>
+                    <p>Active</p>
+                    <p>Completed</p>
+                </div>
             <p class="font-2" id="list-completion-2">Clear Completed</p>
         </div>
     </section>
 
-    <!-- Section for new div -->
+    <!-- Section for new div (applies to mobile screen size) -->
         <div class="greybox font-2 filter-bar todos">
             <p>All</p>
             <p>Active</p>
