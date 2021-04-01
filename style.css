@@ -15,10 +15,6 @@ html {
     left: 20px;
 }
 
-.checkbox {
-    visibility: hidden;
-}
-
 .checkmark-blue {
     background: linear-gradient(45deg, rgba(192, 88, 243), rgba(87, 221, 255));
 }
@@ -35,6 +31,34 @@ html.light,
     .light .greybox {
         background-color: white;
     }
+
+
+
+/* strikethrough/checkmark effect */
+.linethrough {
+    text-decoration: line-through;
+}
+
+.rainbow {
+    background: linear-gradient(45deg, rgba(192, 88, 243), rgba(87, 221, 255));
+}
+
+.checkmarkeazy {
+    background-image: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-check.svg');
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (min-width: 1440px) and (max-width: 2000px) {
     html {
@@ -107,7 +131,7 @@ html.light,
     }
 
     /* Checkmark positioning */
-    #checkmark-active-1,
+    #active-1,
     #checkmark-active-2,
     #checkmark-active-3,
     #checkmark-active-4,
