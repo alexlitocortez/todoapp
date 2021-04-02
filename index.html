@@ -14,19 +14,18 @@
 
 <body>
 
-    <div class="todo-1 todos">
-        <label class="container">
-            <span class="checkmark"></span>
-        </label>
-        <p class="font">Create a new todo...</p>
-    </div>
+    <!-- Adding a new task bar -->
+    <form action="" class="todo-form" onsubmit="return false">
+        <label class="container" id="containers" for="todo-input" onclick="newTodoOnClick()">+</label>
+        <input type="text" class="add-todo" id="todo-input" aria-label="NewTodo" placeholder="Create a new todo..." onkeydown="newTodo(event)">
+    </form>
+
     <!-- Main app list -->
     <section class="app-list" id="app-list">
         <div class="todo-2 todos" id="todo-2">
-            <label class="container" id="containerOne" type="checkbox">
-            </label>
+            <label class="container" id="containerOne" type="checkbox"></label>
             <p class="font" onclick="strike()">Complete online Javascript course</p>
-            <img class="x" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-cross.svg" alt="x sign">
+            <img class="x" id="x" src="/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-cross.svg" alt="x sign">
         </div>
         <div class="greybox todos" id="todo-3">
             <label class="container" id="containerTwo" type="checkbox">
@@ -85,7 +84,14 @@
         <div class="drag-and-drop">
             <p class="font-2">Drag and drop to reorder list</p>
         </div>
+
+        <div class="attribution">
+            Challenge by
+            <a href="https://github.com/alexthegreat650">Alex Cortez</a>
+        </div>
+
     <script src="app.js"></script>
+    <script src="addnewtodo.js"></script>
 </body>
 </html>
 
