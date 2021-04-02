@@ -37,46 +37,34 @@ btn.addEventListener('click', () => {
 // Functions for line strikethough when user is done with todo item
 function strike() {
     document.getElementById('todo-2').classList.toggle('linethrough');
-    document.getElementById('containerOne').classList.toggle('rainbow');
-    document.getElementById('containerOne').classList.toggle('checkmarkeazy');
+    document.getElementById('containerOne').classList.toggle('cross');
 }
 
 function strikeOne() {
-    document.getElementById('todo-3').style.setProperty('text-decoration', 'line-through');
-    document.getElementById('containerTwo').classList.toggle('checkmark-blue');
-    document.getElementById('checkmark-active-2').style.display = 'block';
+    document.getElementById('todo-3').classList.toggle('linethrough');
+    document.getElementById('containerTwo').classList.toggle('cross');
 }
 
-
-
-
-
-
-
-
 function strikeTwo() {
-    document.getElementById('todo-4').style.setProperty('text-decoration', 'line-through');
-    document.getElementById('containerThree').classList.toggle('checkmark-blue');
-    document.getElementById('checkmark-active-3').style.display='block';
+    document.getElementById('todo-4').classList.toggle('linethrough');
+    document.getElementById('containerThree').classList.toggle('cross');
 }
 
 function strikeThree() {
-    document.getElementById('todo-5').style.setProperty('text-decoration', 'line-through');
-    document.getElementById('containerFour').classList.toggle('checkmark-blue');
-    document.getElementById('checkmark-active-4').style.display='block';
+    document.getElementById('todo-5').classList.toggle('linethrough');
+    document.getElementById('containerFour').classList.toggle('cross');
 }
 
 function strikeFour() {
-    document.getElementById('todo-6').style.setProperty('text-decoration', 'line-through');
-    document.getElementById('containerFive').classList.toggle('checkmark-blue');
-    document.getElementById('checkmark-active-5').style.display='block';
+    document.getElementById('todo-6').classList.toggle('linethrough');
+    document.getElementById('containerFive').classList.toggle('cross');
 }
 
 function strikeFive() {
-    document.getElementById('todo-7').style.setProperty('text-decoration', 'line-through');
-    document.getElementById('containerSix').classList.toggle('checkmark-blue');
-    document.getElementById('checkmark-active-6').style.display='block';
+    document.getElementById('todo-7').classList.toggle('linethrough');
+    document.getElementById('containerSix').classList.toggle('cross');
 }
+
 
 
 
@@ -85,5 +73,7 @@ function strikeFive() {
 
 //functionalities need to code for
 // 1. drag and drop
-// 2. Adding new Todos
-// 3. Undoing strikethrough when clicked again
+// 2. Adding new Todos (make 10 max todos)
+// 3. How to make sure when you click X on new Todo tasks it applies to the new ones
+// 4. Make "5 items left" work to count how many todo tasks are left
+// 5. Make "Clear completed work"
