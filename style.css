@@ -34,11 +34,16 @@ html.light,
     .light .container,
     .light .todo-1,
     .light .todo-2,
-    .light .greybox {
+    .light .greybox,
+    .light .container,
+    .light .add-todo,
+    .light .todo-form {
         background-color: white;
     }
 
-
+    .light .add-todo {
+        color: black;
+    }
 
 /* strikethrough/checkmark effect */
 .linethrough {
@@ -68,33 +73,74 @@ html.light,
     }
 
     .todo-form {
-        width: 380px;
+        width: 400px;
+        height: 50px;
+        margin: 32px 0 20px;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        background-color: hsl(237, 14%, 26%);
+        color: white;
+        box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
         position: relative;
+        top: 40px;
         left: 600px;
-        top: 50px;
     }
-
-    #containers {
+    
+    .todo-form label {
+        color: hsl(236, 9%, 61%);
+        text-align: center;
+        font-size: 1.2rem;
         position: relative;
-        top: 35px;
-        left: 20px;
+        left: -1px;
+        top: -1px;
+    }
+    
+    .todo-form label,
+    ul li::before {
+        width: 18px;
+        height: 18px;
+        float: left;
+        margin: auto 20px;
+        border-radius: 50%;
+        border: 1px solid hsl(236, 33%, 92%);
     }
 
+    ul li p {
+        padding: 18px 0;
+    }
+
+    .todo-itemshow {
+        transition: 0.2s;
+    }
+
+    ul li,
+    .todo-list-class .todo-itemshow {
+        display: none;
+        cursor: pointer;
+        transition: 0.2s;
+        list-style: none;
+        color: white;
+        border-bottom: 1px solid hsl(252, 2%, 92%);
+    }
+    
+    .todo-form label {
+        width: 25px;
+        height: 21px;
+        padding-top: 1px;
+    }
+    
     .add-todo {
+        font-family: 'Josefin Sans';
+        width: 100%;
         outline: none;
         border: none;
-        padding: 18px 20px 18px 0;
         border-radius: 5px;
-        width: 100%;
-        height: 20px;
-        background-color: hsl(237, 14%, 26%);
+        background: none;
+        padding: 18px 20px 18px 0;
+        color: white;
     }
-
-    .add-todo::placeholder {
-        position: relative;
-        left: 60px;
-        font-size: 16px;
-    }
+    
 
     .light body {
         background: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-desktop-light.jpg') no-repeat;
