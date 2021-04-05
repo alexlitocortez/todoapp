@@ -16,9 +16,19 @@
 
     <!-- Adding a new task bar -->
     <form action="" class="todo-form" onsubmit="return false">
-        <label class="container" id="containers" for="todo-input" onclick="newTodoOnClick()">+</label>
+        <label class="label" id="containers" for="todo-input" onclick="newTodoOnClick()">+</label>
         <input type="text" class="add-todo" id="todo-input" aria-label="NewTodo" placeholder="Create a new todo..." onkeydown="newTodo(event)">
     </form>
+
+    <!-- Add new todo -->
+    <div id="order-list">
+        <ul class="todo-list-class" id="todo-list-id">
+            <!-- <li class="todo-item show checked"> 
+                <p>Do somethings</p>
+                <span class="close"></span>
+            </li> -->
+        </ul>
+    </div>
 
     <!-- Main app list -->
     <section class="app-list" id="app-list">
