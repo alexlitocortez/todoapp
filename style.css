@@ -110,24 +110,30 @@ html.light,
         padding: 18px 0;
     }
 
+    /* Why won't X go on other spans */
+    ul li .close {
+        padding: 10px 18px;
+        background: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-cross.svg') no-repeat;
+        position: absolute;
+        left: 420px;
+        top: 225px;
+    }
+
     .todo-itemshow {
         transition: 0.2s;
     }
 
+    /* styling for new task entered */
     ul li,
     .todo-list-class .todo-itemshow {
-        display: none;
         cursor: pointer;
         transition: 0.2s;
         list-style: none;
         color: white;
         border-bottom: 1px solid hsl(252, 2%, 92%);
-    }
-    
-    .todo-form label {
-        width: 25px;
-        height: 21px;
-        padding-top: 1px;
+        background-color: hsl(237, 14%, 26%);
+        width: 400px;
+        text-align: center;
     }
     
     .add-todo {
