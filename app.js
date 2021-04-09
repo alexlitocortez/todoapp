@@ -26,7 +26,6 @@ const darkImage = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/ima
 const lightImage = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-mobile-light.jpg";
 
 
-
 btn.addEventListener('click', () => {
     document.body.classList.toggle('light');
     document.body.classList.remove('darkimage');
@@ -34,46 +33,66 @@ btn.addEventListener('click', () => {
 })
 
 
-// Functions for line strikethough when user is done with todo item
-function strike() {
-    document.getElementById('todo-2').classList.toggle('linethrough');
-    document.getElementById('containerOne').classList.toggle('cross');
+
+
+// Add new todo
+function newTodo(event) {
+    // Create DOM elements
+    var li = document.createElement('li');
+    var inputValue = document.getElementById('todo-input').value;
+    var p = document.createElement('p');
+    var t = document.createTextNode(inputValue);
+
+    // paragraph that gets a text node
+    p.appendChild(t);
+    // list item that appends a paragraph
+    li.appendChild(p);
+    li.className = 'todo-item';
+    li.className += 'show';
+
+    if(event.which == 13 || event.keyCode == 13 || event.onclick) {
+        if(inputValue === "") {
+            alert('You must write something!');
+        } else {
+            document.getElementById('todo-list-id').appendChild(li);
+        }
+        // makes value in input bar disappear after you press enter
+        document.getElementById('todo-input').value = "";
+        var span = document.createElement('span');
+            span.className = 'close';
+            span.onclick = function() {
+                var div = this.parentElement;
+                div.style.display = 'none';
+                div.remove();
+                countTodosRemove();
+            }
+        li.appendChild(span);
+        countTodos();
+        }
 }
 
-function strikeOne() {
-    document.getElementById('todo-3').classList.toggle('linethrough');
-    document.getElementById('containerTwo').classList.toggle('cross');
+
+// Check number of Todo items
+function countTodos() {
+    var li = document.getElementsByClassName('close');
+    document.getElementById('todo-number').innerHTML = li.length;
 }
 
-function strikeTwo() {
-    document.getElementById('todo-4').classList.toggle('linethrough');
-    document.getElementById('containerThree').classList.toggle('cross');
+// Check number of Todo items when closed
+function countTodosRemove() {
+    var li = document.getElementsByClassName('close');
+    document.getElementById('todo-number').innerHTML = li.length;
 }
 
-function strikeThree() {
-    document.getElementById('todo-5').classList.toggle('linethrough');
-    document.getElementById('containerFour').classList.toggle('cross');
+// function for strikethrough and background
+function lineThrough() {
+    document.getElementsByClassName('checked').style.textDecoration = 'line-through';
+    document.getElementsByClassName('checked').style.backgroundColor = 'linear-gradient(180deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))';
 }
-
-function strikeFour() {
-    document.getElementById('todo-6').classList.toggle('linethrough');
-    document.getElementById('containerFive').classList.toggle('cross');
-}
-
-function strikeFive() {
-    document.getElementById('todo-7').classList.toggle('linethrough');
-    document.getElementById('containerSix').classList.toggle('cross');
-}
-
-
-
 
 
 
 
 //functionalities need to code for
-// 1. drag and drop
-// 2. Adding new Todos (make 10 max todos)
-// 3. How to make sure when you click X on new Todo tasks it applies to the new ones
-// 4. Make "5 items left" work to count how many todo tasks are left
-// 5. Make "Clear completed work"
+// 1. Adding new Todos (make 10 max todos)
+// 2. Make "Clear completed work"
