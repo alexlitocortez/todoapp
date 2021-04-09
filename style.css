@@ -51,17 +51,6 @@ html.light,
         color: black;
     }
 
-/* strikethrough/checkmark effect */
-.linethrough {
-    text-decoration: line-through;
-}
-
-.cross {
-    background: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-check.svg') no-repeat, 
-    linear-gradient(45deg, rgba(192, 88, 243), rgba(87, 221, 255));
-    background-position: left 5px top 5px;
-}
-
 @media (min-width: 1440px) and (max-width: 2000px) {
     html {
         font-family: 'Josefin Sans', sans-serif;
@@ -116,6 +105,7 @@ html.light,
     }
 
     /* CSS effects on Todo task completed (checkmark & background color) */
+
     ul li::before,
     ul li.checked::before {
         margin: auto 20px;
@@ -123,14 +113,26 @@ html.light,
         bottom: 3px;
     }
 
-    ul li.checked::before {
+    .todo-itemshow::before {
         content: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-check.svg');
         background-image: linear-gradient(180deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    }
+
+    .todo-itemshow p {
+        text-decoration: line-through;
     }
 
     ul li.checked p {
         color: hsl(234, 39%, 85%);
         text-decoration: line-through;
+    }
+
+    ul li.checked::before {
+        content: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-check.svg');
+        line-height: 1.67;
+        margin: 14px 20px;
+        text-align: center;
+        background-image: linear-gradient(180deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
     }
 
     .todo-form label {
@@ -237,13 +239,9 @@ html.light,
     ul li,
     .light .todo-list-class .todo-itemshow {
         background-color: white;
+        box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
     }
 
-    
-    .checked .todo-itemshow {
-        content: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-check.svg');
-        background-color: linear-gradient(180deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-    }
     
     .add-todo {
         font-family: 'Josefin Sans';
@@ -289,25 +287,6 @@ html.light,
     .light .theme-switch {
         background-image: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-moon.svg');
         background-repeat: no-repeat;
-    }
-
-    .font {
-        color: hsl(236, 33%, 92%);
-        position: relative;
-        left: 35px;
-        bottom: 3px;
-    }
-
-    .todo-1 {
-        position: relative;
-        top: 60px;
-        left: 600px;
-    }
-
-    .todo-1,
-    .todo-2 {
-        background-color: hsl(237, 14%, 26%);
-        width: 400px;
     }
 
     .drag-and-drop {
@@ -379,127 +358,10 @@ html.light,
     h1 {
         color: white;
     }
-
-    /* checkmark positioning */
-    #checkmark-active-1,
-    #checkmark-active-2,
-    #checkmark-active-3,
-    #checkmark-active-4,
-    #checkmark-active-5,
-    #checkmark-active-6 {
-        position: relative;
-        top: 6px;
-        left: 4px;
-    }
     
-    .font {
-        color: hsl(236, 33%, 92%);
-        position: relative;
-        left: 35px;
-        bottom: 3px;
-    }
-
-    .app-list {
-        position: relative;
-        top: 90px;
-        left: 330px;
-    }
-
-    .todo-1 {
-        position: relative;
-        left: 330px;
-        top: 70px;
-    }
-
-    .todo-1,
-    .todo-2 {
-        background-color: hsl(237, 14%, 26%);
-        width: 400px;
-        
-    }
 
     .todos {
         display: flex;
-    }
-
-    .greybox {
-        background-color: hsl(237, 14%, 26%);
-        width: 400px;
-    }
-
-    .x {
-        position: relative;
-        left: 100px;
-        top: 7px;
-        height: 25px;
-    }
-
-    .x-2 {
-        position: relative;
-        left: 180px;
-        top: 7px;
-        height: 25px;
-    }
-
-    .x-3 {
-        position: relative;
-        left: 185px;
-        top: 7px;
-        height: 25px;
-    }
-
-    .x-4 {
-        position: relative;
-        left: 230px;
-        top: 7px;
-        height: 25px;
-    }
-
-    .x-5 {
-        position: relative;
-        left: 216px;
-        top: 7px;
-        height: 25px;
-    }
-
-    .x-6 {
-        position: relative;
-        left: 59px;
-        top: 7px;
-        height: 25px;
-    }
-
-    #list-completion-1 {
-        position: relative;
-        left: 20px;
-    }
-
-    #list-completion-2 {
-        position: relative;
-        left: 160px;
-    }
-
-    .filter-bar {
-        display: none;
-    }
-
-    .new-filter-bar {
-        display: flex;
-        color: hsl(234, 11%, 52%);
-        position: relative;
-        left: 100px;
-        font-size: 10px;
-    }
-
-    .new-filter-bar p {
-        margin-right: 5px;
-    }
-
-    .drag-and-drop {
-        position: relative;
-        top: 100px;
-        left: 460px;
-        font-size: 24px;
     }
 }
 
@@ -541,149 +403,6 @@ html.light,
         bottom: 100px;
     }
 
-    /* font properties for todo list */
-    .font {
-        color: hsl(236, 33%, 92%);
-        font-size: 12px;
-        position: relative;
-        left: 27px;
-    }
-
-    /* IDs to position paragraph elements correctly */
-    #list-completion-1 {
-        position: relative;
-        left: 20px;
-    }
-
-    #list-completion-2 {
-        position: relative;
-        left: 85px;
-    }
-
-    /* X sign */
-    .x {
-        position: relative;
-        top: 10px;
-        right: -65px;
-        height: 15px;
-    }
-
-    .x-2 {
-        position: relative;
-        right: -125px;
-        top: 10px;
-        height: 15px;
-    }
-
-    .x-3 {
-        height: 15px;
-        position: relative;
-        top: 10px;
-        right: -132px;
-    }
-
-    .x-4 {
-        position: relative;
-        top: 10px;
-        right: -165px;
-        height: 15px;
-    }
-
-    .x-5 {
-        position: relative;
-        top: 10px;
-        right: -155px;
-        height: 15px;
-    }
-
-    .x-6 {
-        position: relative;
-        top: 10px;
-        right: -37px;
-        height: 15px;
-    }
-
-    /* First checkbox */
-    .container {
-        width: 20px;
-        height: 20px;
-        background-color: hsl(237, 14%, 26%);
-        border: 1px solid hsl(234, 11%, 52%);
-        border-radius: 50%;
-        position: relative;
-        top: 10px;
-        left: 20px;
-    }
-
-    .checkbox {
-        visibility: hidden;
-    }
-
-    .todo-1 {
-        display: flex;
-        background-color: hsl(237, 14%, 26%);
-        position: relative;
-        bottom: -5px;
-        left: 20px;
-        z-index: 998;
-        border-radius: 10%;
-        width: 300px;
-    }
-
-    .todo-1 p {
-        color: hsl(236, 33%, 92%);
-        position: relative;
-        left: 30px;
-        font-size: 12px;
-    }
-
-    /* Format for app list */
-    .todo-2 {
-        display: flex;
-        background-color: hsl(237, 14%, 26%);
-        position: relative;
-        top: 5px;
-        left: 15px;
-        border-radius: 5%;
-    }
-
-    .app-list {
-        position: relative;
-        bottom: -15px;
-        z-index: 998;
-        left: 5px;
-        width: 300px;
-    }
-
-    /* Format for each app list item */
-    .greybox {
-        display: flex;
-        background-color: hsl(237, 14%, 26%);
-        position: relative;
-        left: 15px;
-    }
-
-       /* Positioning for filter-bar */
-    .filter-bar {
-        position: relative;
-        bottom: -30px;
-        left: 20px;
-        width: 300px;
-    }
-
-    .new-filter-bar {
-        display: none;
-    }
-
-    /* Spacing between paragraph elements in filter-bar */
-    .filter-bar p {
-        margin-right: 7px;
-        position: relative;
-        left: 27%;
-        font-size: 14px;
-        cursor: pointer;
-    }
-
     /* Positioning for drag-and-drop paragraph */
     .drag-and-drop {
         position: relative;
@@ -691,47 +410,6 @@ html.light,
         left: 5px;
         padding-bottom: 20px;
         text-align: center;
-    }
-
-    /* active class for inserting checkmark and checkmark color*/
-    .checkmark-blue {
-        background: linear-gradient(45deg, rgba(192, 88, 243), rgba(87, 221, 255));
-    }
-
-    #checkmark-active-1 {
-        position: relative;
-        top: 5px;
-        left: 4px;
-    }
-
-    #checkmark-active-2 {
-        position: relative;
-        top: 5px;
-        left: 4px;
-    }
-
-    #checkmark-active-3 {
-        position: relative;
-        top: 5px;
-        left: 4px;
-    }
-
-    #checkmark-active-4 {
-        position: relative;
-        top: 5px;
-        left: 4px;
-    }
-
-    #checkmark-active-5 {
-        position: relative;
-        top: 5px;
-        left: 4px;
-    }
-
-    #checkmark-active-6 {
-        position: relative;
-        top: 5px;
-        left: 4px;
     }
 
     /* light theme */
