@@ -33,6 +33,15 @@ btn.addEventListener('click', () => {
 })
 
 
+// checkmark background and line-through
+function completedChanger() {
+    const todo = this.parentElement;
+    todo.classList.toggle('active');
+    todo.classList.toggle('completed');
+}
+
+
+
 
 
 // Add new todo
@@ -86,8 +95,9 @@ function countTodosRemove() {
 
 // function for strikethrough and background
 function lineThrough() {
-    document.getElementsByClassName('checked').style.textDecoration = 'line-through';
-    document.getElementsByClassName('checked').style.backgroundColor = 'linear-gradient(180deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))';
+    const todo = this.parentElement;
+    todo.classList.toggle('active');
+    todo.classList.toggle('completed');
 }
 
 
