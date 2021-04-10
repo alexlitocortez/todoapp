@@ -75,6 +75,68 @@ html.light,
         box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
     }
 
+    /* Todo container */
+    .todo-container {
+        background-color: hsl(237, 14%, 26%);
+    }
+
+    .todo-container.completed .check-button {
+        background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+        border: none !important;
+    }
+
+    .todo-container.completed .check-button ~ .todo-text {
+        text-decoration: line-through;
+    }
+
+    .todo-container.completed .check-button img {
+        opacity: 100%;
+    }
+
+    .check-button {
+        width: 18px;
+        height: 18px;
+        float: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 1px solid hsl(236, 33%, 92%);
+        margin-right: 20px;
+        transition: border 0.2s;
+        user-select: none;
+    }
+
+    .todo-text {
+        background: transparent;
+        width: 100%;
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 1.1rem;
+        font-weight: 400;
+        letter-spacing: 0.02rem;
+        border: none;
+        outline: none;
+        color: white;
+    }
+
+    .remove-todo {
+        background-image: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-cross.svg') no-repeat;
+        background-position: center;
+        width: 60px;
+        height: 55px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+
+
+
+
+
+
     .todo-form {
         width: 600px;
         height: 50px;
@@ -111,15 +173,6 @@ html.light,
         margin: auto 20px;
         position: relative;
         bottom: 3px;
-    }
-
-    .todo-itemshow::before {
-        content: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-check.svg');
-        background-image: linear-gradient(180deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-    }
-
-    .todo-itemshow p {
-        text-decoration: line-through;
     }
 
     ul li.checked p {
