@@ -31,7 +31,7 @@ a {
 }
 
 p {
-    color: hsl(234, 11%, 52%);
+    color: white;
 }
 
 html.light,
@@ -75,46 +75,15 @@ html.light,
         box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
     }
 
-    /* Todo container */
-    .todo-container {
-        background-color: hsl(237, 14%, 26%);
-    }
-
-    .todo-container.completed .check-button {
-        background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-        border: none !important;
-    }
-
-    .todo-container.completed .check-button ~ .todo-text {
-        text-decoration: line-through;
-    }
-
-    .todo-container.completed .check-button img {
-        opacity: 100%;
-    }
-
-    .check-button {
-        width: 18px;
-        height: 18px;
-        float: left;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        border: 1px solid hsl(236, 33%, 92%);
-        margin-right: 20px;
-        transition: border 0.2s;
-        user-select: none;
-    }
-
     .todo-text {
         background: transparent;
         width: 100%;
-        height: 90%;
+        height: auto;
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        font-size: 1.1rem;
+        text-align: center;
+        font-size: 3.3vmin;
         font-weight: 400;
         letter-spacing: 0.02rem;
         border: none;
@@ -122,20 +91,9 @@ html.light,
         color: white;
     }
 
-    .remove-todo {
-        background-image: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-cross.svg') no-repeat;
-        background-position: center;
-        width: 60px;
-        height: 55px;
-        margin-left: 10px;
-        cursor: pointer;
+    .check-button:hover {
+        border: 1px solid hsl(280, 87%, 65%) !important;
     }
-
-
-
-
-
-
 
     .todo-form {
         width: 600px;
@@ -151,13 +109,8 @@ html.light,
         top: 40px;
         left: 500px;
     }
-
-    ul li::before {
-        content: '';
-    }
     
-    .todo-form label,
-    ul li::before {
+    .todo-form label {
         width: 18px;
         height: 18px;
         float: left;
@@ -168,25 +121,6 @@ html.light,
 
     /* CSS effects on Todo task completed (checkmark & background color) */
 
-    ul li::before,
-    ul li.checked::before {
-        margin: auto 20px;
-        position: relative;
-        bottom: 3px;
-    }
-
-    ul li.checked p {
-        color: hsl(234, 39%, 85%);
-        text-decoration: line-through;
-    }
-
-    ul li.checked::before {
-        content: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-check.svg');
-        line-height: 1.67;
-        margin: 14px 20px;
-        text-align: center;
-        background-image: linear-gradient(180deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-    }
 
     .todo-form label {
         width: 25px;
@@ -200,10 +134,6 @@ html.light,
         top: 1px;
     }
 
-    ul li p {
-        padding: 18px 0;
-    }
-
     /* Why won't X go on other spans */
     ul li .close {
         padding: 10px 18px;
@@ -212,6 +142,37 @@ html.light,
         left: 550px;
         top: 50px;
     }
+
+    ul li .checkbox {
+        width: 18px;
+        height: 18px;
+        float: left;
+        margin: auto 20px;
+        border-radius: 50%;
+        border: 1px solid hsl(236, 33%, 92%);
+    }
+
+    ul li .checkbox.completed {
+        width: 18px;
+        height: 18px;
+        float: left;
+        margin: auto 20px;
+        border-radius: 50%;
+        border: 1px solid hsl(236, 33%, 92%);
+        background: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-check.svg') no-repeat,
+        linear-gradient(45deg, rgba(192, 88, 243), rgba(87, 221, 255));
+    }
+
+    ul li p {
+        padding: 18px 0;
+        font-size: 3.3vmin;
+        font-weight: 400;
+        letter-spacing: 0.02rem;
+        border: none;
+        outline: none;
+        color: white;
+    }
+
 
     .todo-controler {
         position: relative;
@@ -258,10 +219,6 @@ html.light,
     .todo-filter span:hover,
     .todo-clear:hover,
     .todo-filter .active {
-        color: hsl(220, 98%, 61%);
-    }
-    
-    .active {
         color: hsl(220, 98%, 61%);
     }
     
