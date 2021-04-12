@@ -43,8 +43,10 @@ html.light,
     .light .add-todo,
     .light .todo-form,
     .light .close,
-    .light .todo-controler {
+    .light .todo-controler,
+    .light ul li p {
         background-color: white;
+        color: hsl(235, 19%, 35%);
     }
 
     .light .add-todo {
@@ -143,24 +145,24 @@ html.light,
         top: 50px;
     }
 
-    ul li .checkbox {
+    .check-button {
         width: 18px;
         height: 18px;
-        float: left;
-        margin: auto 20px;
         border-radius: 50%;
         border: 1px solid hsl(236, 33%, 92%);
     }
 
-    ul li .checkbox.completed {
+    .check-button.completed {
         width: 18px;
         height: 18px;
-        float: left;
         margin: auto 20px;
         border-radius: 50%;
         border: 1px solid hsl(236, 33%, 92%);
-        background: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-check.svg') no-repeat,
-        linear-gradient(45deg, rgba(192, 88, 243), rgba(87, 221, 255));
+        background: linear-gradient(45deg, rgba(192, 88, 243), rgba(87, 221, 255));
+    }
+
+    ul li .check-button:hover {
+        border: 1px solid hsl(280, 87%, 65%);
     }
 
     ul li p {
@@ -171,8 +173,9 @@ html.light,
         border: none;
         outline: none;
         color: white;
+        position: relative;
+        left: 60px;
     }
-
 
     .todo-controler {
         position: relative;
