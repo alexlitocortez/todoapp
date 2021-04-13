@@ -25,14 +25,11 @@ const iconImages = document.getElementById('iconImages')
 const darkImage = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-mobile-dark.jpg";
 const lightImage = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-mobile-light.jpg";
 
-
-
 btn.addEventListener('click', () => {
     document.body.classList.toggle('light');
     document.body.classList.remove('darkimage');
     document.querySelector('html').classList.toggle('light');
 })
-
 
 // Add new todo
 function newTodo(event) {
@@ -49,6 +46,7 @@ function newTodo(event) {
     li.appendChild(p);
     li.className = 'todo-item';
     li.className += 'show';
+    li.id = 'show';
 
     if(event.which == 13 || event.keyCode == 13 || event.onclick) {
         if(inputValue === "") {
@@ -57,12 +55,17 @@ function newTodo(event) {
             document.getElementById('todo-list-id').appendChild(li);
         }
         // makes value in input bar disappear after you press enter
-        checkbox.className = 'checkbox';
-        checkbox.id = 'checkbox';
+        var checkbox = document.createElement('span');
+            checkbox.className = 'so';
+            checkbox.id = 'so';
+            p.id = 'strike-through';
+
+            checkbox.addEventListener('click', () => {
+                document.getElementById('so').classList.toggle('completion');
+                document.getElementById('strike-through').classList.toggle('amazing');
+            })
+
         li.appendChild(checkbox);
-        li.addEventListener('click', () => {
-            checkbox.classList.toggle('completed');
-        })
 
         document.getElementById('todo-input').value = "";
         var span = document.createElement('span');
@@ -77,10 +80,6 @@ function newTodo(event) {
         countTodos();
         }
 }
-
-
-
-
 
 // Check number of Todo items
 function countTodos() {
