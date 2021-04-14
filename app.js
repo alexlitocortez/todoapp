@@ -55,17 +55,23 @@ function newTodo(event) {
             document.getElementById('todo-list-id').appendChild(li);
         }
         // makes value in input bar disappear after you press enter
+
         var checkbox = document.createElement('span');
             checkbox.className = 'so';
             checkbox.id = 'so';
             p.id = 'strike-through';
+        // Creating span for checkmark with linear-gradient background
 
-            checkbox.addEventListener('click', () => {
-                document.getElementById('so').classList.toggle('completion');
-                document.getElementById('strike-through').classList.toggle('amazing');
-            })
+        var checkmark = document.createElement('img');
+            checkmark.className = 'checkmark';
+            checkmark.id = 'checkmark';
+            checkmark.src = '/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-check.svg';
+        // Creating img element for checkmark to appear
 
-        li.appendChild(checkbox);
+        checkbox.addEventListener('click', () => {
+            document.getElementById('so').classList.toggle('completion');
+            document.getElementById('strike-through').classList.toggle('amazing');
+        })
 
         document.getElementById('todo-input').value = "";
         var span = document.createElement('span');
@@ -104,5 +110,5 @@ function lineThrough() {
 
 
 //functionalities need to code for
-// 1. Adding new Todos (make 10 max todos)
-// 2. Make "Clear completed work"
+// 1. Make "Clear completed work"
+// 2. When I click checkmark the todo count goes down
