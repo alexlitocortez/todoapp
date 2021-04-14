@@ -69,12 +69,42 @@ html.light,
         overflow-x: hidden;
     }
 
-    .todos {
-        width: 100%;
-        border-radius: 5px;
-        margin-top: 5px;
-        margin-bottom: 30px;
-        box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
+    #order-list {
+        position: relative;
+        top: 50px;
+    }
+
+
+    /* Experiment */
+    .todo-container {
+        cursor: pointer;
+        transition: 0.2s;
+        list-style: none;
+        color: white;
+        background-color: hsl(235, 24%, 19%);
+        width: 600px;
+        text-align: center;
+        display: flex;
+        position: relative;
+        left: 460px;
+    }
+
+    .so {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 1px solid hsl(236, 33%, 92%);
+        position: absolute;
+        right: 560px;
+        top: 25px;
+    }
+
+    .so.completion {
+        background: linear-gradient(45deg, rgba(192, 88, 243), rgba(87, 221, 255));
+    }
+
+    .amazing {
+        text-decoration: line-through;
     }
 
     .todo-text {
@@ -91,6 +121,25 @@ html.light,
         border: none;
         outline: none;
         color: white;
+        position: relative;
+        left: 15px;
+    }
+
+    .remove-todo {
+        background: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-cross.svg') no-repeat;
+        background-position: center;
+        width: 18px;
+        height: 55px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    .todos {
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 5px;
+        margin-bottom: 30px;
+        box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
     }
 
     .check-button:hover {
@@ -142,7 +191,7 @@ html.light,
         background: url('/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-cross.svg') no-repeat;
         position: absolute;
         left: 550px;
-        top: 50px;
+        top: 30px;
     }
 
     .check-button {
@@ -155,10 +204,8 @@ html.light,
     .check-button.completed {
         width: 18px;
         height: 18px;
-        margin: auto 20px;
         border-radius: 50%;
         border: 1px solid hsl(236, 33%, 92%);
-        background: linear-gradient(45deg, rgba(192, 88, 243), rgba(87, 221, 255));
     }
 
     ul li .check-button:hover {
@@ -166,7 +213,6 @@ html.light,
     }
 
     ul li p {
-        padding: 18px 0;
         font-size: 3.3vmin;
         font-weight: 400;
         letter-spacing: 0.02rem;
@@ -241,7 +287,7 @@ html.light,
         transition: 0.2s;
         list-style: none;
         color: white;
-        background-color: hsl(237, 14%, 26%);
+        background-color: hsl(235, 24%, 19%);
         width: 600px;
         text-align: center;
         display: flex;
@@ -255,7 +301,6 @@ html.light,
         box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
     }
 
-    
     .add-todo {
         font-family: 'Josefin Sans';
         width: 100%;
