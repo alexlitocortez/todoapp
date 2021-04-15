@@ -60,18 +60,16 @@ function newTodo(event) {
             checkbox.className = 'so';
             checkbox.id = 'so';
             p.id = 'strike-through';
+            p.className = 'strike-through';
         // Creating span for checkmark with linear-gradient background
 
-        var checkmark = document.createElement('img');
-            checkmark.className = 'checkmark';
-            checkmark.id = 'checkmark';
-            checkmark.src = '/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-check.svg';
-        // Creating img element for checkmark to appear
+            li.addEventListener('click', () => {
+                checkbox.classList.toggle('completion');
+                p.classList.toggle('amazing');
+            })
+            // Added event listener so when you click list item, it fills the span with a linear gradient and crosses out the todo item
 
-        checkbox.addEventListener('click', () => {
-            document.getElementById('so').classList.toggle('completion');
-            document.getElementById('strike-through').classList.toggle('amazing');
-        })
+        li.appendChild(checkbox);
 
         document.getElementById('todo-input').value = "";
         var span = document.createElement('span');
@@ -112,3 +110,12 @@ function lineThrough() {
 //functionalities need to code for
 // 1. Make "Clear completed work"
 // 2. When I click checkmark the todo count goes down
+
+
+
+
+
+// Potential solutions
+// 1. Use getElementByClassName (didn't work)
+// 2. Tried onclick (didn't work)
+// 3. Tried different ID's
