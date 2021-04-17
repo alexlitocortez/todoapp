@@ -57,10 +57,12 @@ function newTodo(event) {
         // makes value in input bar disappear after you press enter
 
         var checkbox = document.createElement('span');
+        var image = document.createElement('image');
             checkbox.className = 'so';
             checkbox.id = 'so';
             p.id = 'strike-through';
             p.className = 'strike-through';
+            image.src = '/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-check.svg';
         // Creating span for checkmark with linear-gradient background
 
             li.addEventListener('click', () => {
@@ -68,7 +70,6 @@ function newTodo(event) {
                 p.classList.toggle('amazing');
             })
             // Added event listener so when you click list item, it fills the span with a linear gradient and crosses out the todo item
-
         li.appendChild(checkbox);
 
         document.getElementById('todo-input').value = "";
