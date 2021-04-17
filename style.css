@@ -99,7 +99,7 @@ html.light,
         top: 25px;
     }
 
-    .so.completion {
+    .completion {
         background: linear-gradient(45deg, rgba(192, 88, 243), rgba(87, 221, 255));
     }
 
