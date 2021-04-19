@@ -72,6 +72,10 @@ function newTodo(event) {
             // Added event listener so when you click list item, it fills the span with a linear gradient and crosses out the todo item
         li.appendChild(checkbox);
 
+        li.onclick = function() {
+            countTodos();
+        }
+
         document.getElementById('todo-input').value = "";
         var span = document.createElement('span');
             span.className = 'close';
@@ -79,7 +83,7 @@ function newTodo(event) {
                 var div = this.parentElement;
                 div.style.display = 'none';
                 div.remove();
-                countTodosRemove();
+                countTodos();
             }
         li.appendChild(span);
         countTodos();
@@ -89,13 +93,7 @@ function newTodo(event) {
 // Check number of Todo items
 function countTodos() {
     var li = document.getElementsByClassName('close');
-    document.getElementById('todo-number').innerHTML = li.length;
-}
-
-// Check number of Todo items when closed
-function countTodosRemove() {
-    var li = document.getElementsByClassName('close');
-    document.getElementById('todo-number').innerHTML = li.length;
+    document.getElementById('todo-number').innerText = li.length;
 }
 
 // function for strikethrough and background
@@ -116,7 +114,5 @@ function lineThrough() {
 
 
 
-// Potential solutions
-// 1. Use getElementByClassName (didn't work)
-// 2. Tried onclick (didn't work)
-// 3. Tried different ID's
+// Click div and counter goes down
+
