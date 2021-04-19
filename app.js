@@ -72,9 +72,12 @@ function newTodo(event) {
             // Added event listener so when you click list item, it fills the span with a linear gradient and crosses out the todo item
         li.appendChild(checkbox);
 
-        li.onclick = function() {
-            countTodos();
-        }
+            li.onclick = function() {
+                 var money = document.getElementById('todo-number').innerText
+                if(checkbox.classList.contains('completion')) {
+                    money--;
+                }
+            }
 
         document.getElementById('todo-input').value = "";
         var span = document.createElement('span');
@@ -96,12 +99,6 @@ function countTodos() {
     document.getElementById('todo-number').innerText = li.length;
 }
 
-// function for strikethrough and background
-function lineThrough() {
-    const todo = this.parentElement;
-    todo.classList.toggle('active');
-    todo.classList.toggle('completed');
-}
 
 
 
