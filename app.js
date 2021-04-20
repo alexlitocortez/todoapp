@@ -57,27 +57,20 @@ function newTodo(event) {
         // makes value in input bar disappear after you press enter
 
         var checkbox = document.createElement('span');
-        var image = document.createElement('image');
             checkbox.className = 'so';
             checkbox.id = 'so';
             p.id = 'strike-through';
             p.className = 'strike-through';
-            image.src = '/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/icon-check.svg';
         // Creating span for checkmark with linear-gradient background
 
             li.addEventListener('click', () => {
                 checkbox.classList.toggle('completion');
                 p.classList.toggle('amazing');
+                addOne();
             })
+
             // Added event listener so when you click list item, it fills the span with a linear gradient and crosses out the todo item
         li.appendChild(checkbox);
-
-            li.onclick = function() {
-                 var money = document.getElementById('todo-number').innerText
-                if(checkbox.classList.contains('completion')) {
-                    money--;
-                }
-            }
 
         document.getElementById('todo-input').value = "";
         var span = document.createElement('span');
@@ -97,6 +90,16 @@ function newTodo(event) {
 function countTodos() {
     var li = document.getElementsByClassName('close');
     document.getElementById('todo-number').innerText = li.length;
+}
+
+function addOne() {
+    var list = document.getElementsByClassName('todo-itemshow');
+    if(document.getElementById('so').classList.contains('completion')) {
+        document.getElementById('todo-number').innerHTML = --list.length;
+    }
+    else {
+        document.getElementById('todo-number').innerHTML = list.length;
+    }
 }
 
 
