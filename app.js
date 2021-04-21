@@ -46,7 +46,8 @@ function newTodo(event) {
     li.appendChild(p);
     li.className = 'todo-item';
     li.className += 'show';
-    li.id = 'show';
+    li.id = 'todo-item';
+    li.id += 'show';
 
     if(event.which == 13 || event.keyCode == 13 || event.onclick) {
         if(inputValue === "") {
@@ -63,11 +64,14 @@ function newTodo(event) {
             p.className = 'strike-through';
         // Creating span for checkmark with linear-gradient background
 
+
             li.addEventListener('click', () => {
                 checkbox.classList.toggle('completion');
                 p.classList.toggle('amazing');
-                addOne();
+                andOne();
             })
+
+
 
             // Added event listener so when you click list item, it fills the span with a linear gradient and crosses out the todo item
         li.appendChild(checkbox);
@@ -92,19 +96,17 @@ function countTodos() {
     document.getElementById('todo-number').innerText = li.length;
 }
 
-function addOne() {
-    var list = document.getElementsByClassName('todo-itemshow');
+
+// The problem is I can't get the other span to trigger the counter
+
+function andOne() {
+    var list = document.querySelectorAll('.todo-itemshow');
     if(document.getElementById('so').classList.contains('completion')) {
         document.getElementById('todo-number').innerHTML = --list.length;
-    }
-    else {
+    } else {
         document.getElementById('todo-number').innerHTML = list.length;
     }
 }
-
-
-
-
 
 //functionalities need to code for
 // 1. Make "Clear completed work"
