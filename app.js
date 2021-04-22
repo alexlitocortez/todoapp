@@ -100,13 +100,19 @@ function countTodos() {
 // The problem is I can't get the other span to trigger the counter
 
 function andOne() {
+    // select list item
     var list = document.querySelectorAll('.todo-itemshow');
-    if(document.getElementById('so').classList.contains('completion')) {
+    // If checkbox is highlighted
+    if(document.querySelectorAll('li').classList.contains('completion')) {
+        // If checkbox is selected make sure the number counter goes down
         document.getElementById('todo-number').innerHTML = --list.length;
     } else {
+        // If not, just show the
         document.getElementById('todo-number').innerHTML = list.length;
     }
 }
+
+
 
 //functionalities need to code for
 // 1. Make "Clear completed work"
