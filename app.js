@@ -68,10 +68,9 @@ function newTodo(event) {
             li.addEventListener('click', () => {
                 checkbox.classList.toggle('completion');
                 p.classList.toggle('amazing');
-                andOne();
             })
 
-
+            li.addEventListener('click', andOne);
 
             // Added event listener so when you click list item, it fills the span with a linear gradient and crosses out the todo item
         li.appendChild(checkbox);
@@ -96,23 +95,31 @@ function countTodos() {
     document.getElementById('todo-number').innerText = li.length;
 }
 
-
-// The problem is I can't get the other span to trigger the counter
-
 function andOne() {
-    // select list item
-    var list = document.querySelectorAll('.todo-itemshow');
-    // If checkbox is highlighted
-    if(document.querySelectorAll('li').classList.contains('completion')) {
-        // If checkbox is selected make sure the number counter goes down
+    var list = document.getElementsByClassName('todo-itemshow');
+    if(document.getElementsByTagName('li').classList.contains('completion')) {
         document.getElementById('todo-number').innerHTML = --list.length;
-    } else {
-        // If not, just show the
+    }
+    else {
         document.getElementById('todo-number').innerHTML = list.length;
     }
 }
 
+li.addEventListener('click', function(e) {
+    if(e.target && e.target.id == 'so'){
+        if(document.getElementsByClassName('so').classList.contains('completion')) {
+            
+        }
+    }
+})
 
+
+
+document.addEventListener('click',function(e){
+    if(e.target && e.target.id== 'brnPrepend'){
+          //do something
+     }
+ });
 
 //functionalities need to code for
 // 1. Make "Clear completed work"
