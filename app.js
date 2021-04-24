@@ -70,7 +70,15 @@ function newTodo(event) {
                 p.classList.toggle('amazing');
             })
 
-            li.addEventListener('click', andOne);
+
+            li.addEventListener('click', () => {
+                var money = document.getElementsByClassName('todo-itemshow');
+                if(document.getElementById('so').classList.contains('completion')) {
+                    document.getElementById('todo-number').innerHTML = --money.length;
+                } else {
+                    document.getElementById('todo-number').innerHTML = money.length;
+                }
+            })
 
             // Added event listener so when you click list item, it fills the span with a linear gradient and crosses out the todo item
         li.appendChild(checkbox);
@@ -96,8 +104,8 @@ function countTodos() {
 }
 
 function andOne() {
-    var list = document.getElementsByClassName('todo-itemshow');
-    if(document.getElementsByTagName('li').classList.contains('completion')) {
+    var list = document.getElementsByClassName('todo-list-class');
+    if(document.getElementById('so').classList.contains('completion')) {
         document.getElementById('todo-number').innerHTML = --list.length;
     }
     else {
@@ -105,21 +113,12 @@ function andOne() {
     }
 }
 
-li.addEventListener('click', function(e) {
-    if(e.target && e.target.id == 'so'){
-        if(document.getElementsByClassName('so').classList.contains('completion')) {
-            
-        }
-    }
-})
 
 
 
-document.addEventListener('click',function(e){
-    if(e.target && e.target.id== 'brnPrepend'){
-          //do something
-     }
- });
+
+
+
 
 //functionalities need to code for
 // 1. Make "Clear completed work"
