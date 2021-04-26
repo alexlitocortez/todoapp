@@ -70,16 +70,6 @@ function newTodo(event) {
                 p.classList.toggle('amazing');
             })
 
-
-            li.addEventListener('click', () => {
-                var money = document.getElementsByClassName('todo-itemshow');
-                if(document.getElementById('so').classList.contains('completion')) {
-                    document.getElementById('todo-number').innerHTML = --money.length;
-                } else {
-                    document.getElementById('todo-number').innerHTML = money.length;
-                }
-            })
-
             // Added event listener so when you click list item, it fills the span with a linear gradient and crosses out the todo item
         li.appendChild(checkbox);
 
@@ -102,20 +92,6 @@ function countTodos() {
     var li = document.getElementsByClassName('close');
     document.getElementById('todo-number').innerText = li.length;
 }
-
-function andOne() {
-    var list = document.getElementsByClassName('todo-list-class');
-    if(document.getElementById('so').classList.contains('completion')) {
-        document.getElementById('todo-number').innerHTML = --list.length;
-    }
-    else {
-        document.getElementById('todo-number').innerHTML = list.length;
-    }
-}
-
-
-
-
 
 
 
