@@ -25,6 +25,8 @@ const iconImages = document.getElementById('iconImages')
 const darkImage = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-mobile-dark.jpg";
 const lightImage = "/Users/l/Desktop/Frontendmentor.io/Todo App/todo-app-main/images/bg-mobile-light.jpg";
 
+const clearCompleteBtn = document.getElementById('todo-clear');
+
 btn.addEventListener('click', () => {
     document.body.classList.toggle('light');
     document.body.classList.remove('darkimage');
@@ -85,6 +87,8 @@ function newTodo(event) {
         li.appendChild(span);
         countTodos();
         }
+
+        clearCompleteBtn.addEventListener('click', clearTodos);
 }
 
 // Check number of Todo items
@@ -92,6 +96,20 @@ function countTodos() {
     var li = document.getElementsByClassName('close');
     document.getElementById('todo-number').innerText = li.length;
 }
+
+function clearTodos() {
+     var moneyTime = document.getElementsByClassName('todo-itemshow')
+    if(document.getElementById('so').classList.contains('completion')) {
+        moneyTime.classList.contains('completion').remove();
+        } else {
+            countTodos();
+        }
+}
+
+
+// This is the function for removing tasks when you hit "clear completed"
+
+
 
 
 
