@@ -72,6 +72,10 @@ function newTodo(event) {
                 p.classList.toggle('amazing');
             })
 
+            clearCompleteBtn.addEventListener('click', () => {
+                document.getElementsByClassName('todo-itemshow').remove();
+            })
+
             // Added event listener so when you click list item, it fills the span with a linear gradient and crosses out the todo item
         li.appendChild(checkbox);
 
@@ -87,28 +91,13 @@ function newTodo(event) {
         li.appendChild(span);
         countTodos();
         }
-
-        clearCompleteBtn.addEventListener('click', clearTodos);
 }
 
 // Check number of Todo items
 function countTodos() {
     var li = document.getElementsByClassName('close');
     document.getElementById('todo-number').innerText = li.length;
-}
-
-function clearTodos() {
-     var moneyTime = document.getElementsByClassName('todo-itemshow')
-    if(document.getElementById('so').classList.contains('completion')) {
-        moneyTime.classList.contains('completion').remove();
-        } else {
-            countTodos();
-        }
-}
-
-
-// This is the function for removing tasks when you hit "clear completed"
-
+} 
 
 
 
