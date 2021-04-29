@@ -72,9 +72,9 @@ function newTodo(event) {
                 p.classList.toggle('amazing');
             })
 
-            clearCompleteBtn.addEventListener('click', () => {
-                document.getElementsByClassName('todo-itemshow').remove();
-            })
+            clearCompleteBtn.addEventListener('click', removeListItem);
+
+            // Why does click remove whole list
 
             // Added event listener so when you click list item, it fills the span with a linear gradient and crosses out the todo item
         li.appendChild(checkbox);
@@ -99,9 +99,11 @@ function countTodos() {
     document.getElementById('todo-number').innerText = li.length;
 } 
 
-
-
-
+function removeListItem() {
+    var item = document.querySelector('.todo-itemshow.completion');
+    var wholeList = document.getElementById('order-list');
+    wholeList.removeChild(item);
+}
 
 //functionalities need to code for
 // 1. Make "Clear completed work"
@@ -112,4 +114,3 @@ function countTodos() {
 
 
 // Click div and counter goes down
-
