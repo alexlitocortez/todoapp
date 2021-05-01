@@ -72,7 +72,7 @@ function newTodo(event) {
                 p.classList.toggle('amazing');
             })
 
-            clearCompleteBtn.addEventListener('click', removeListItem);
+            clearCompleteBtn.addEventListener('click', removeItem);
 
             // Why does click remove whole list
 
@@ -99,11 +99,22 @@ function countTodos() {
     document.getElementById('todo-number').innerText = li.length;
 } 
 
-function removeListItem() {
-    var item = document.querySelector('.todo-itemshow.completion');
-    var wholeList = document.getElementById('order-list');
-    wholeList.removeChild(item);
-}
+
+
+
+
+
+
+
+
+clearCompleteBtn.addEventListener('click', () => {
+    var item = document.getElementById('todo-itemshow');
+    item.remove();
+    countTodos();
+})
+
+
+
 
 //functionalities need to code for
 // 1. Make "Clear completed work"
