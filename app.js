@@ -99,19 +99,9 @@ function countTodos() {
     document.getElementById('todo-number').innerText = li.length;
 } 
 
-
-
-
-
-
-
-
-
-clearCompleteBtn.addEventListener('click', () => {
-    var item = document.getElementById('todo-itemshow');
-    item.remove();
-    countTodos();
-})
+function counting() {
+    
+}
 
 
 
